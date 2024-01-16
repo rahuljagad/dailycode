@@ -2,6 +2,8 @@
 380. Insert Delete GetRandom O(1)
 https://leetcode.com/problems/insert-delete-getrandom-o1/
 '''
+
+
 class RandomizedSet:
 
     def __init__(self):
@@ -12,7 +14,6 @@ class RandomizedSet:
         self.data_dict = {} # dictionary is used for O(1) of insert and remove
         self.data_list = [] # list is used for the GetRandom() scenario
 
-
     def insert(self, val: int) -> bool:
         """
         Inserts a value to the set. Returns true if the set did not already contain the specified element.
@@ -22,7 +23,6 @@ class RandomizedSet:
             self.data_dict[val] = len(self.data_list) - 1
             return True        
         return False
-
 
     def remove(self, val: int) -> bool:
         """
@@ -42,4 +42,4 @@ class RandomizedSet:
         """
         Get a random element from the set.
         """
-        return random.choice(self.data_list)        
+        return random.choice(self.data_list)

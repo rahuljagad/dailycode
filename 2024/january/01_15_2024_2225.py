@@ -14,10 +14,8 @@ class Solution:
             lost_count[match[1]] = lost_count.get(match[1], 0) + 1
         results = [[] for _ in range(2)]
         for player, count in lost_count.items():
-            if count == 0:
-                results[0].append(player)
-            if count == 1:
-                results[1].append(player)
+            if count == 0 or count == 1:
+                results[count].append(player)
         results[0] = sorted(results[0])
         results[1] = sorted(results[1])
         return results
