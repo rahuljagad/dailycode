@@ -3,6 +3,7 @@
 Solved using recursion.
 '''
 
+
 class Solution:
     def findPaths(self, m: int, n: int, maxMove: int, startRow: int, startColumn: int) -> int:
         MOD = 10**9 + 7
